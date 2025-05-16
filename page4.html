@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listes Stylisées</title>
+  <style>
+    body {
+      font-family: 'Algerian', serif;
+      background: linear-gradient(to right, #f0f4f8, #ffffff);
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    fieldset {
+      margin: 20px auto;
+      max-width: 800px;
+      border: 3px solid #3498db;
+      border-radius: 12px;
+      padding: 20px;
+      background-color: #ecf9ff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    legend {
+      font-size: 1.5em;
+      color: #1a5276;
+      padding: 0 10px;
+      text-shadow: 1px 1px 1px #ccc;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    ul, ol, dl {
+      margin-left: 40px;
+    }
+
+    li, dt, dd {
+      padding: 5px;
+      margin: 5px 0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    li:hover, dt:hover, dd:hover {
+      background-color: #d6eaf8;
+      color: #154360;
+      transform: translateX(6px) scale(1.02);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .retrait {
+      margin-left: 40px;
+    }
+
+    .pas_de_retrait {
+      list-style-position: inside;
+    }
+
+    .cercle {
+      list-style-type: circle;
+    }
+
+    .carre {
+      list-style-type: square;
+    }
+
+    .rien {
+      list-style-type: none;
+    }
+
+    .commence_a_zero {
+      list-style-type: decimal-leading-zero;
+    }
+
+    .lettres_minuscules {
+      list-style-type: lower-alpha;
+    }
+
+    .chiffres_romains {
+      list-style-type: upper-roman;
+    }
+
+    .lettres_grecques {
+      list-style-type: lower-greek;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <fieldset>
+    <legend>Liste non ordonnée</legend>
+    <ul>
+      <li>Fraises</li>
+      <li>Framboises</li>
+      <li>Cerises</li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Liste ordonnée</legend>
+    <ol>
+      <li>Je me lève</li>
+      <li>Je mange et je bois</li>
+      <li>Je retourne me coucher</li>
+    </ol>
+  </fieldset>
+
+  <fieldset>
+    <legend>Liste de définition</legend>
+    <dl>
+      <dt>Chat</dt>
+      <dd>Animal à 4 pattes qui fait "Miaou !"</dd>
+      <dt>Chien</dt>
+      <dd>Animal à 4 pattes qui fait "Ouaf Ouaf !"</dd>
+      <dt>Prof de maths</dt>
+      <dd>Personne qui enseigne des choses que personne ne comprend</dd>
+    </dl>
+  </fieldset>
+
+  <fieldset>
+    <legend>Listes avec et sans retrait</legend>
+    <p>Avec retrait :</p>
+    <ul class="retrait">
+      <li>Liste<br>à puces</li>
+      <li>Ligne 1<br>Ligne 2</li>
+      <li>Texte décalé sur la droite</li>
+    </ul>
+
+    <p>Sans retrait :</p>
+    <ul class="pas_de_retrait">
+      <li>Liste<br>à puces</li>
+      <li>Ligne 1<br>Ligne 2</li>
+      <li>Texte non décalé</li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Listes non ordonnées</legend>
+    <p>Type <em>disc</em> :</p>
+    <ul>
+      <li>Liste</li>
+      <li>à</li>
+      <li>puces</li>
+    </ul>
+
+    <p>Type <em>circle</em> :</p>
+    <ul class="cercle">
+      <li>Liste</li>
+      <li>à</li>
+      <li>puces</li>
+    </ul>
+
+    <p>Type <em>square</em> :</p>
+    <ul class="carre">
+      <li>Liste</li>
+      <li>à</li>
+      <li>puces</li>
+    </ul>
+
+    <p>Type <em>none</em> :</p>
+    <ul class="rien">
+      <li>Liste</li>
+      <li>à</li>
+      <li>puces</li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Listes ordonnées</legend>
+    <p>Décimale :</p>
+    <ol>
+      <li>Un</li>
+      <li>Deux</li>
+      <li>Trois</li>
+      <li>Quatre</li>
+    </ol>
+
+    <p>Décimale avec zéros :</p>
+    <ol class="commence_a_zero">
+      <li>Un</li>
+      <li>Deux</li>
+      <li>Trois</li>
+      <li>Quatre</li>
+    </ol>
+
+    <p>Alphabétique (minuscules) :</p>
+    <ol class="lettres_minuscules">
+      <li>Un</li>
+      <li>Deux</li>
+      <li>Trois</li>
+      <li>Quatre</li>
+    </ol>
+
+    <p>Chiffres romains :</p>
+    <ol class="chiffres_romains">
+      <li>Un</li>
+      <li>Deux</li>
+      <li>Trois</li>
+      <li>Quatre</li>
+    </ol>
+
+    <p>Grec (minuscules) :</p>
+    <ol class="lettres_grecques">
+      <li>Un</li>
+      <li>Deux</li>
+      <li>Trois</li>
+      <li>Quatre</li>
+    </ol>
+  </fieldset>
+
+</body>
+</html>

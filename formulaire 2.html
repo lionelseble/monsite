@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Remplissage de CV Stylé</title>
+  <style>
+    :root {
+      --primary-color: #00e676;
+      --secondary-color: #00e676;
+      --background-color: #0d1117;
+      --card-color: #161b22;
+      --text-color: #e6edf3;
+      --border-color: #30363d;
+      --hover-color: #1db954;
+      --button-hover-color: #00ff88;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: 'Algerian', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--primary-color);
+      font-size: 3rem;
+      animation: fadeIn 2s ease;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    form, .preview {
+      background-color: var(--card-color);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      flex: 1 1 550px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form:hover, .preview:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(109, 230, 145, 0.8);
+    }
+
+    fieldset {
+      border: 2px solid var(--border-color);
+      border-radius: 15px;
+      margin-bottom: 25px;
+      padding: 20px;
+    }
+
+    legend {
+      color: var(--secondary-color);
+      font-size: 1.5rem;
+      padding: 0 12px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 16px;
+      margin-top: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      background-color: #22272e;
+      color: var(--text-color);
+      font-size: 1.1rem;
+      transition: border 0.3s, background-color 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--primary-color);
+      background-color: #2a2f37;
+      outline: none;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #8b949e;
+    }
+
+    button {
+      width: 100%;
+      padding: 20px;
+      background: var(--primary-color);
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 15px;
+      font-size: 1.5rem;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background: var(--button-hover-color);
+      transform: scale(1.08);
+    }
+
+    .preview {
+      text-align: center;
+      background: linear-gradient(135deg, #161b22, #1e252f);
+      padding-top: 20px;
+    }
+
+    .preview img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--primary-color);
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+
+    .preview img:hover {
+      transform: scale(1.1);
+    }
+
+    .preview h2, .preview h4 {
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    .preview p {
+      font-style: italic;
+      margin-bottom: 20px;
+      padding: 0 20px;
+      color: var(--text-color);
+      font-size: 1.2rem;
+    }
+
+    .cv-field {
+      margin-bottom: 20px;
+      text-align: left;
+      padding: 0 30px;
+    }
+
+    .cv-field strong {
+      color: var(--primary-color);
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.3rem;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <h1>FORMULAIRE 2</h1>
+
+  <div class="container">
+    <form id="cvForm">
+      <fieldset>
+        <legend>Photo</legend>
+        <input type="file" id="photo" accept="image/*">
+      </fieldset>
+
+      <fieldset>
+        <legend>Informations personnelles</legend>
+        <input type="text" id="name" placeholder="Nom et Prénom" required>
+        <input type="text" id="title" placeholder="Titre du poste" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Résumé professionnel</legend>
+        <textarea id="summary" rows="5" placeholder="Décrivez-vous brièvement..."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Expérience professionnelle</legend>
+        <input type="text" id="experience" placeholder="Votre expérience principale">
+      </fieldset>
+
+      <fieldset>
+        <legend>Formation</legend>
+        <input type="text" id="education" placeholder="Votre formation principale">
+      </fieldset>
+
+      <fieldset>
+        <legend>Compétences</legend>
+        <input type="text" id="skills" placeholder="Ex : Communication, Gestion, Programmation">
+      </fieldset>
+
+      <button type="submit">Mettre à jour mon CV</button>
+    </form>
+
+    <div class="preview">
+      <img id="previewPhoto" src="" alt="Photo de profil" style="display:none;">
+      <h2 id="previewName">Nom Prénom</h2>
+      <h4 id="previewTitle">Titre du poste</h4>
+      <p id="previewSummary">Résumé professionnel...</p>
+      <div class="cv-field">
+        <strong>Expérience :</strong>
+        <span id="previewExperience"></span>
+      </div>
+      <div class="cv-field">
+        <strong>Formation :</strong>
+        <span id="previewEducation"></span>
+      </div>
+      <div class="cv-field">
+        <strong>Compétences :</strong>
+        <span id="previewSkills"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('cvForm');
+    const photoInput = document.getElementById('photo');
+    const previewPhoto = document.getElementById('previewPhoto');
+
+    function updatePreview() {
+      document.getElementById('previewName').innerText = document.getElementById('name').value;
+      document.getElementById('previewTitle').innerText = document.getElementById('title').value;
+      document.getElementById('previewSummary').innerText = document.getElementById('summary').value;
+      document.getElementById('previewExperience').innerText = document.getElementById('experience').value;
+      document.getElementById('previewEducation').innerText = document.getElementById('education').value;
+      document.getElementById('previewSkills').innerText = document.getElementById('skills').value;
+    }
+
+    photoInput.addEventListener('change', function() {
+      const file = photoInput.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          previewPhoto.src = e.target.result;
+          previewPhoto.style.display = 'block';
+        }
+        reader.readAsDataURL(file);
+      }
+    });
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      updatePreview();
+    });
+
+    form.querySelectorAll('input, textarea').forEach(input => {
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          updatePreview();
+        }
+      });
+    });
+  </script>
+ <a href="page1.html">Alllez à la page 1</a> 
+
+</body>
+</html>

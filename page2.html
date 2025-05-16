@@ -1,0 +1,215 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Site Web</title>
+    <link rel="stylesheet" href="webfonts/all.min.css"> <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #ffa600;
+            --light-bg: #fff7f0;
+            --dark-text: #333;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #fff0e0, #ffe8cc);
+            margin: 0;
+            padding: 0;
+            color: var(--dark-text);
+        }
+
+        header {
+            background-color: var(--main-color);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            animation: slideDown 1s ease;
+        }
+
+        h2 a {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-decoration: none;
+            font-size: 2em;
+            transition: color 0.3s;
+        }
+
+        .header-table {
+            margin: auto;
+            width: 90%;
+        }
+
+        .header-table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .header-table img {
+            width: 80px;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .header-table img:hover {
+            transform: scale(1.1) rotate(3deg);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.2s ease;
+        }
+
+        fieldset {
+            border: 2px solid var(--main-color);
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 15px 20px;
+            background-color: var(--light-bg);
+            transition: transform 0.3s;
+        }
+
+        fieldset:hover {
+            transform: scale(1.01);
+        }
+
+        legend {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--main-color);
+            font-size: 1.3em;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+
+        i {
+            margin-right: 8px;
+            color: var(--main-color);
+        }
+
+        img[alt="Photo de profil"] {
+            display: block;
+            margin: 10px auto;
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(255, 127, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media screen and (max-width: 600px) {
+            .header-table, .header-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .header-table img {
+                margin: 10px auto;
+            }
+
+            h2 a {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <table class="header-table">
+        <tr>
+            <td><h2><a href="#bottom">BIENVENUE SUR LE SITE DE <br> Lionel SÉBLÉ</a></h2></td>
+            
+        </tr>
+    </table>
+</header>
+
+<main>
+
+    <fieldset>
+        <legend>Mon état civil</legend>
+        <ul>
+            <li><i class="fas fa-user"></i> Nom : SÉBLÉ</li>
+            <li><i class="fas fa-user"></i> Prénom : Lionel</li>
+            <li><i class="fas fa-calendar-alt"></i> Âge : 17 ans</li>
+            <li><i class="fas fa-phone"></i> Contact : 0152843539</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Mon état civil</legend>
+        <ul>
+            <li><i class="fas fa-envelope"></i> Email : seblefils@gmail.com</li>
+            <li><i class="fas fa-heart"></i> Passion : Développement personnel</li>
+            <li><i class="fas fa-running"></i> Hobby : Football</li>
+            <li><i class="fas fa-lightbulb"></i> Talent : Capacité à anticiper et résoudre les problèmes</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Mon état civil</legend>
+        <ul>
+            <li><i class="fas fa-globe"></i> Langues parlées : Français, Anglais</li>
+            <li><i class="fas fa-map-marker-alt"></i> Adresse : 0000</li>
+            <li><i class="fas fa-birthday-cake"></i> Date de naissance : 01/01/2000</li>
+            <li><i class="fas fa-id-card"></i> Nationalité : Béninois</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Mon état civil</legend>
+        <ul>
+            <li><i class="fas fa-briefcase"></i> Profession : Étudiant</li>
+            <li><i class="fas fa-building"></i> Institution : Université de Cocody</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Photo</legend>
+        <a href="#bottom"><img src="default.png" alt="Photo de profil" width="200"></a>
+    </fieldset>
+
+    <fieldset>
+        <legend>Diplômes</legend>
+        <ul>
+            <li><i class="fas fa-graduation-cap"></i> CEP</li>
+            <li><i class="fas fa-graduation-cap"></i> BEPC</li>
+            <li><i class="fas fa-graduation-cap"></i> BAC</li>
+            <li><i class="fas fa-graduation-cap"></i> BTS</li>
+        </ul>
+    </fieldset>
+
+    <fieldset id="bottom">
+        <legend>DESCRIPTION DE MA PERSONNALITE</legend>
+        <p>Lionel SÉBLÉ est un jeune esprit ambitieux et tourné vers l'avenir. À seulement 17 ans, il investit son énergie dans le développement personnel,
+        cherchant constamment à s'améliorer et à comprendre le monde. Sa passion pour le football lui donne discipline et esprit d’équipe,
+        tandis que sa capacité à résoudre les problèmes fait de lui un futur leader prometteur.</p>
+    </fieldset>
+
+</main>
+
+</body>
+</html>
+    

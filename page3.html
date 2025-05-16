@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fable et Histoire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #ffffff);
+      color: #333;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    p, q {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    q {
+      color: #0077cc;
+      font-style: italic;
+    }
+
+    .fable {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      background-color: #fdfdfd;
+      border-left: 5px solid #2196f3;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .vers {
+      margin-bottom: 0.8rem;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    .vers:hover {
+      color: #005fa3;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      .container {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>
+      Vous souvenez-vous de la phrase célèbre qu'a prononcée Neil Armstrong en posant le premier pied sur la Lune ?
+      <q>C'est un petit pas pour l'Homme, un grand pas pour l'Humanité</q>.
+      C'était un certain 20 Juillet 1969...
+    </p>
+
+    <div class="fable">
+      <div class="vers">Maître Corbeau, sur un arbre perché,</div>
+      <div class="vers">Tenait en son bec un fromage.</div>
+      <div class="vers">Maître Renard, par l'odeur alléché,</div>
+      <div class="vers">Lui tint à peu près ce langage :</div>
+      <div class="vers">"Hé ! bonjour, Monsieur du Corbeau.</div>
+      <div class="vers">Que vous êtes joli ! que vous me semblez beau !</div>
+      <div class="vers">Sans mentir, si votre ramage</div>
+      <div class="vers">Se rapporte à votre plumage,</div>
+      <div class="vers">Vous êtes le Phénix des hôtes de ces bois."</div>
+      <div class="vers">À ces mots le Corbeau ne se sent pas de joie ;</div>
+      <div class="vers">Et pour montrer sa belle voix,</div>
+      <div class="vers">Il ouvre un large bec, laisse tomber sa proie.</div>
+      <div class="vers">Le Renard s'en saisit, et dit : "Mon bon Monsieur,</div>
+      <div class="vers">Apprenez que tout flatteur</div>
+      <div class="vers">Vit aux dépens de celui qui l'écoute</div>
+      <div class="vers">Cette leçon vaut bien un fromage, sans doute.</div>
+      <div class="vers">Le Corbeau, honteux et confus,</div>
+      <div class="vers">Jura, mais un peu tard, qu'on ne l'y prendrait plus.</div>
+    </div>
+  </div>
+</body>
+</html>
